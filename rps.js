@@ -17,37 +17,41 @@ function computerPlay () {
         return 'scissor'};        
 } 
 
-let computerSelection = computerPlay();
 
-function playRound (playerSelection, computerSelection) { 
-
+function playRound (playerSelection, computerSelection) {
+    let a = 'You Win!' + ' ' + playerSelection.toLowerCase() + ' ' + 'beats' + ' ' + computerSelection;
+    let b = 'You Lose!' + ' ' + computerSelection + ' ' + 'beats' + ' ' + playerSelection.toLowerCase();
+    let c = 'You Tie!'; 
+      
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissor'){
-    return 'You Win! Rock beats Scissors'};
+    return a};
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper'){
-    return 'You Lose! Paper beats Rock'};
+    return b};
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'rock'){
-        return 'You Tie!'};
+        return c};
     if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissor'){
-        return 'You Lose! Scissor beats Paper'};
+        return b};
     if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock'){
-        return 'You Win! Paper beats Rock'};
+        return a};
     if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'paper'){
-        return 'You Tie!'};
+        return c};
     if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper'){
-        return 'You Win! Scissors beat Paper'};
+        return a};
     if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'rock'){
-        return 'You Lose! Rock beats Scissors'}
+        return b}
     if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'scissors'){
-        return 'You Tie'}
-        else {return 'Please input either Rock, Paper or Scissors!'};
-}    
+        return c}
+           else {return 'Please input either Rock, Paper or Scissors!'};           
+} 
+
+function game(){}
 
     for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt('Rock', 'Paper', 'Scissors');
-        let computerSelection = computerPlay();
+        let playerSelection = prompt('Rock, Paper, Scissors?');
+        let computerSelection = computerPlay();        
         
         if (i === 0){
-        console.log(playRound(playerSelection, computerSelection));
+            console.log(playRound(playerSelection, computerSelection));
         }
         if (i === 1) {
             console.log(playRound(playerSelection, computerSelection));
@@ -60,8 +64,9 @@ function playRound (playerSelection, computerSelection) {
         }
         if (i === 4) {      
             console.log(playRound(playerSelection, computerSelection));
-        }    
     }
+}
+
 
 
            
