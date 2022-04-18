@@ -56,22 +56,10 @@ for (let i = 0; i < 5; i++){
     let updatedPlayer = playerSelection.toLowerCase();   
     let computerSelection = computerPlay();   
     
-    if (i === 0){      
-        console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`); 
-    }   if (i === 1 ){
-        console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);
-    }   if (i === 2){
-        console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);
-    }   if (i === 3){
-        console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);
-    }   if (i === 4){
-        console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);
-    }
+    console.log(playRound(updatedPlayer, computerSelection));
+    console.log('Player:' + `${playerScore}` + ' ' + 'Computer:' + `${computerScore}`);    
+        
+    
 }      
                        
 function gameWinner(playerScore, computerScore){
