@@ -14,9 +14,9 @@ function computerPlay() {
     if (result === 2){
         return 'scissor'};        
 } 
-let playerSelection = prompt('Rock, Paper or Scissors?');
-let updatedPlayer = playerSelection.toLowerCase();   
-let computerSelection = computerPlay();
+
+
+
 
 function playRound(updatedPlayer, computerSelection) {
     let a = 'You Win!' + ' ' + updatedPlayer + ' ' + 'beats' + ' ' + computerSelection;
@@ -51,33 +51,40 @@ function playRound(updatedPlayer, computerSelection) {
         return c};
 }             
  
-    for (let i = 1; i <= 5; i++){      
-        if (i === 1){
-            console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);                  
-        }if (i === 2){
-            console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);     
-        }if ( i === 3){
-            console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);     
-        }if ( i === 4){
-            console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);     
-        }if ( i === 5){
-            console.log(playRound(updatedPlayer,computerSelection));
-        console.log(`${playerScore}`,`${computerScore}`);     
-        }
-    }    
+for (let i = 0; i < 5; i++){      
+    let playerSelection = prompt('Rock, Paper or Scissors?'); 
+    let updatedPlayer = playerSelection.toLowerCase();   
+    let computerSelection = computerPlay();   
     
+    if (i === 0){      
+        console.log(playRound(updatedPlayer,computerSelection));
+        console.log(`${playerScore}`,`${computerScore}`); 
+    }   if (i === 1 ){
+        console.log(playRound(updatedPlayer,computerSelection));
+        console.log(`${playerScore}`,`${computerScore}`);
+    }   if (i === 2){
+        console.log(playRound(updatedPlayer,computerSelection));
+        console.log(`${playerScore}`,`${computerScore}`);
+    }   if (i === 3){
+        console.log(playRound(updatedPlayer,computerSelection));
+        console.log(`${playerScore}`,`${computerScore}`);
+    }   if (i === 4){
+        console.log(playRound(updatedPlayer,computerSelection));
+        console.log(`${playerScore}`,`${computerScore}`);
+    }
+}      
+                       
 function gameWinner(playerScore, computerScore){
         if (`${playerScore}` > `${computerScore}`){
             return 'You Win!';
         } else if (`${computerScore}` > `${playerScore}`){
             return 'Computer Wins!';
-        }else {return 'Its a Tie!'};              
+        } else {return 'Its a Tie!'};              
 }
-    console.log(gameWinner(playerScore, computerScore));
+   
+console.log(gameWinner(playerScore, computerScore));
+  
+
     
 
     
