@@ -57,7 +57,7 @@ for (let i = 0; i < 5; i++){
     let computerSelection = computerPlay();   
     
     console.log(playRound(updatedPlayer, computerSelection));
-    console.log('Player:' + `${playerScore}` + ' ' + 'Computer:' + `${computerScore}`);    
+    console.log(`Player:${playerScore} Computer:${computerScore}`);    
         
     
 }      
