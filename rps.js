@@ -16,14 +16,15 @@ function computerPlay() {
 } 
 
 const roundResult = document.getElementById('round-result');
-
+const roundScore = document.getElementById('round-score');
+ 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
     updatedPlayer = button.id;
     computerSelection = computerPlay();
-    console.log(playRound(updatedPlayer, computerSelection));
-    console.log(`Player:${playerScore} Computer:${computerScore}`);
+    roundResult.innerHTML = playRound(updatedPlayer, computerSelection);
+    roundScore.innerHTML = (`Player:${playerScore} Computer:${computerScore}`);
     }); 
 });
   
