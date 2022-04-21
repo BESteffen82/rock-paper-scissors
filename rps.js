@@ -17,6 +17,7 @@ function computerPlay() {
 
 const roundResult = document.getElementById('round-result');
 const roundScore = document.getElementById('round-score');
+const gameResult = document.getElementById('game-result');
  
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
@@ -25,6 +26,7 @@ buttons.forEach((button) => {
     computerSelection = computerPlay();
     roundResult.innerHTML = playRound(updatedPlayer, computerSelection);
     roundScore.innerHTML = (`Player:${playerScore} Computer:${computerScore}`);
+    gameResult.innerHTML = gameWinner(playerScore, computerScore);
     }); 
 });
   
@@ -61,10 +63,10 @@ function playRound(updatedPlayer, computerSelection) {
         };
     if (updatedPlayer === computerSelection) {
         return c};
-        
     }
+        
 
-
+// Did not use in GUI
 //for (let i = 0; i < 5; i++){      
     //let playerSelection = prompt('Rock, Paper or Scissors?'); 
     //let updatedPlayer = playerSelection.toLowerCase();   
@@ -75,14 +77,18 @@ function playRound(updatedPlayer, computerSelection) {
 //}      
                      
 function gameWinner(playerScore, computerScore){
-        if (`${playerScore}` > `${computerScore}`){
-            return 'You Win!';
-        } else if (`${computerScore}` > `${playerScore}`){
-            return 'Computer Wins!';
-        } else {return 'Its a Tie!'};              
+        if (`${playerScore}` == 5){
+            return 'You Win! Game Over!';
+        } else if (`${computerScore}` == 5){
+            return 'Computer Wins! Game Over!';
+        } else if (`${playerScore}` < 5 || `${computerScore}` < 5)
+        return '';
+         else if (`${playerScore}` >= 5 || `${computerScore}` >= 5) {
+        }; return '';         
 }
+
    
-console.log(gameWinner(playerScore, computerScore));
+//console.log(gameWinner(playerScore, computerScore));
   
 
     
