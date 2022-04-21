@@ -1,0 +1,77 @@
+body {
+    height: 100vh;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+}    
+
+.buttons {
+    background-color: skyblue;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    font-size: 100px;
+    font-weight: 700;
+    background-color: black;
+    padding: 20px 0;
+    color: skyblue;
+}
+
+#rock, #paper, #scissors {
+    display:flex;
+    margin: 120px 0;
+    align-items: center;
+    padding: 40px 100px;
+    justify-content: center;
+    background-color: royalblue;
+    border-radius: 20px;
+    border-color: blue;
+    border-width: 3px;
+    font-size: 50px;
+    font-weight: bold;
+    color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.results {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;            
+}
+
+.round, .game {
+    font-size: 50px;
+    color: skyblue;
+    font-weight: 300;
+    font-style: italic;
+}
+
+#round-result, #round-score, #game-result {
+    color:ghostwhite;
+    font-size: 20px;
+    font-weight: 100;
+    
+    
+
+}
+
+
+
+
+ 
+
+    
