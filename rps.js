@@ -77,15 +77,16 @@ function playRound(updatedPlayer, computerSelection) {
 //}      
                      
 function gameWinner(playerScore, computerScore){
-        if (`${playerScore}` == 5){
+    if (`${playerScore}` == 5){
             return 'You Win! Game Over!';
-        } else if (`${computerScore}` == 5){
-            return 'Computer Wins! Game Over!';
-        } else if (`${playerScore}` < 5 || `${computerScore}` < 5)
-        return '';
-         else if (`${playerScore}` >= 5 || `${computerScore}` >= 5) {
-        }; return '';         
+    } else if (`${computerScore}` == 5){
+        return 'Computer Wins! Game Over!';
+    } else if (`${playerScore}` < 5 || `${computerScore}` < 5) {
+        return '';           
+    }
 }
+    
+   
 
    
 //console.log(gameWinner(playerScore, computerScore));
